@@ -69,4 +69,61 @@ where first_name LIKE '_anel';
 
 
 
+-- SORTING ASC or DESC
 
+-- Query all the results for employees table where first name in descending order
+
+select *
+from employees
+order by first_name desc;
+
+-- Query gender and first name for those employees order by index 2
+
+select  gender, first_name
+from employees
+order by 2;
+
+-- Avg, max, min, sum functions
+
+select * from salaries
+order by salary desc;
+
+select avg(salary) Average_Salary
+from salaries;
+
+-- Query max salary alias Highest_paid from salaries
+
+select max(salary) Highest_paid
+from salaries;
+
+-- Query min salary alias Poor_Salary from salaries
+
+select min(salary) Poor_Salary
+from salaries;
+
+-- Query total sum of salaries alias Rich from salaries
+
+select sum(salary) Rich_From_Salary
+from salaries;
+
+-- COUNT Funtctions
+
+-- Query the count for employees in employees table
+
+select count(*)
+from employees;
+
+-- Query count for non duplicate dept_no department number
+-- from dep_emp table print emp_no and from_date
+select count(distinct dept_no) emp_no, from_date
+from dept_emp;
+
+-- Query count of Gender from employees table
+select * from employees;
+
+select count(gender)
+from employees;
+
+-- Query the non duplicate count of gender in employees table
+select count(distinct gender)
+from employees;
